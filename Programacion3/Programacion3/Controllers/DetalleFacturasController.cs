@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Programacion3.Models;
+using Rotativa;
 
 namespace Programacion3.Controllers
 {
@@ -21,6 +22,11 @@ namespace Programacion3.Controllers
             return View(detalleFacturas.ToList());
         }
 
+        public ActionResult Imprimir()
+        {
+            var print = new ActionAsPdf("Index");
+            return print;
+        }
         // GET: DetalleFacturas/Details/5
         public ActionResult Details(int? id)
         {
