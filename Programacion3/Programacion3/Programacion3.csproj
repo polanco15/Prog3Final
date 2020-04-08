@@ -129,11 +129,17 @@
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\DetalleFacturas\Create.cshtml" />
+    <Content Include="Views\DetalleFacturas\Delete.cshtml" />
+    <Content Include="Views\DetalleFacturas\Details.cshtml" />
+    <Content Include="Views\DetalleFacturas\Edit.cshtml" />
+    <Content Include="Views\DetalleFacturas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\DetalleFacturasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
