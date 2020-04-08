@@ -1,0 +1,74 @@
+﻿@model Programacion3.Models.Factura
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Factura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descuento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descuento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITBIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITBIS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFactura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaFactura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdFactura }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
