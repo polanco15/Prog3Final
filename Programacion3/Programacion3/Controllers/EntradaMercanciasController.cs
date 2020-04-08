@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Programacion3.Models;
-
+using Rotativa;
 namespace Programacion3.Controllers
 {
     public class EntradaMercanciasController : Controller
@@ -19,6 +19,12 @@ namespace Programacion3.Controllers
         {
             var entradaMercancias = db.EntradaMercancias.Include(e => e.Producto).Include(e => e.Proveedor);
             return View(entradaMercancias.ToList());
+        }
+
+        public ActionResult Imprimir()
+        {
+            var print = new ActionAsPdf("Index");
+            return print;
         }
 
         // GET: EntradaMercancias/Details/5
