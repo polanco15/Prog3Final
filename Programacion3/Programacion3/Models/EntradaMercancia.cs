@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
 namespace Programacion3.Models
 {
-    public class DetalleFactura
+    public class EntradaMercancia
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int IdDetalle { get; set; }
-
-        [ForeignKey("IdFactura")]
-        public Factura Factura { get; set; }
+        public int IdEntrada { get; set; }
 
         [ForeignKey("IdProducto")]
         public Producto Producto { get; set; }
+
+        [ForeignKey("IdProveedor")]
+        public Proveedor Proveedor { get; set; }
+
+        [Required]
+        public DateTime FechaEntrada { get; set; }
         [Required]
         public int Cantidad { get; set; }
-        [Required]
-        public decimal Precio { get; set; }
-
-        public decimal SubTotal { get; set; }
     }
 }
