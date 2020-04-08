@@ -5,8 +5,7 @@ using System.Web;
 
 namespace Programacion3.Models
 {
-    public class FinalContext
+    public class Categorias
     {
-
     }
 }
