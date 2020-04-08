@@ -11,7 +11,7 @@ namespace Programacion3.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int IDCategoria { get; set; }
+        public int IdCategoria { get; set; }
         [Required]
         public string Categoria { get; set; }
 

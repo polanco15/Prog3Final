@@ -13,9 +13,11 @@ namespace Programacion3.Models
         [Key]
         public int IdEntrada { get; set; }
 
+        public int IdProducto { get; set; }
         [ForeignKey("IdProducto")]
         public Producto Producto { get; set; }
 
+        public int IdProveedor { get; set; }
         [ForeignKey("IdProveedor")]
         public Proveedor Proveedor { get; set; }
 

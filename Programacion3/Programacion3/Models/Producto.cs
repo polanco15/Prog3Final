@@ -14,7 +14,7 @@ namespace Programacion3.Models
         [Required]
         public string Nombre { get; set; }
         [Required]
-        public Decimal Precio { get; set; }
+        public decimal Precio { get; set; }
 
     }
 }

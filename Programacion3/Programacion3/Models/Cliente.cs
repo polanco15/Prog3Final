@@ -22,9 +22,9 @@ namespace Programacion3.Models
            ErrorMessage = "Dirección de Correo electrónico incorrecta.")]
         public string Email { get; set; }
         [Required]
-        public int IDCategoria { get; set; }
+        public int IdCategoria { get; set; }
 
-        [ForeignKey("IDCategoria")]
+        [ForeignKey("IdCategoria")]
         public Categorias Categoria { get; set; }
     }
 }

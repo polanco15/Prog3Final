@@ -12,11 +12,14 @@ namespace Programacion3.Models
         [Key]
         public int IdDetalle { get; set; }
 
+        public int IdFactura { get; set; }
         [ForeignKey("IdFactura")]
         public Factura Factura { get; set; }
 
+        public int IdProducto { get; set; }
         [ForeignKey("IdProducto")]
         public Producto Producto { get; set; }
+
         [Required]
         public int Cantidad { get; set; }
         [Required]
