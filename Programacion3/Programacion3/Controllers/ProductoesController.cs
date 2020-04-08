@@ -17,9 +17,25 @@ namespace Programacion3.Controllers
         // GET: Productoes
         public ActionResult Index()
         {
-            return View(db.Productos.ToList());
+            
+             return View(db.Productos.ToList());
         }
 
+        public ActionResult Buscar ( string nombre ="")
+        {
+            List<Producto> productos = new List<Producto>();
+
+            if (nombre != "")
+            {
+                productos = db.Productos.Where(p => p.Nombre.Contains(nombre)).ToList();
+            }
+            else
+            {
+                productos = db.Productos.ToList();
+            }
+            ViewBag.nombre = nombre;
+            return View(db.Productos.ToList());
+        }
         // GET: Productoes/Details/5
         public ActionResult Details(int? id)
         {

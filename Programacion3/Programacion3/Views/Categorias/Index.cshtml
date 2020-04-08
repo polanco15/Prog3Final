@@ -3,13 +3,15 @@
 @{
     ViewBag.Title = "Index";
 }
+<link href="~/Content/style.css" rel="stylesheet" type="text/css" />
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "classname" })
+    @Html.ActionLink("Print", "Imprimir")
 </p>
-<table class="table">
+<table class="table" id="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Categoria)

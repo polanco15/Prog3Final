@@ -4,10 +4,19 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Producto</h2>
+
+@using (Html.BeginForm("Index", "Productoes", "Buscar"))
+{
+    <p>
+        Search: @Html.TextBox("nombre", (string)ViewBag.name)
+        <input class="btn btn-primary btn-sm" type="submit" value="Search" /> 
+    </p>
+
+}
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -20,20 +29,21 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Precio)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdProducto }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdProducto }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdProducto })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IdProducto }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IdProducto }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IdProducto })
+            </td>
+        </tr>
+    }
 
 </table>
