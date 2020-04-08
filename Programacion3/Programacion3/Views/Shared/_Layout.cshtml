@@ -3,31 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Sistema de Facturacion</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-light" style="background-color: #e3f2fd;"">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
+                    
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Sistema de Pasteleria", "Index", "Productoes", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Sistema de Pasteleria", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Producto", "Index", "Productoes")</li>
+                    <li>@Html.ActionLink("Producto", "Index", "Productoes", null, new { @class = "classname" })</li>
                     <li>@Html.ActionLink("Proveedor", "Index", "Proveedors")</li>
                     <li>@Html.ActionLink("Cliente", "Index", "Clientes")</li>
                     <li>@Html.ActionLink("Categorias", "Index", "Categorias")</li>
                     <li>@Html.ActionLink("Facturas", "Index", "Facturas")</li>
                     <li>@Html.ActionLink("Detalle", "Index", "DetalleFacturas")</li>
-                    <li>@Html.ActionLink("Entradas", "Index", "EntradasMercancias")</li>
+                    <li>@Html.ActionLink("Entradas", "Index", "EntradaMercancias")</li>
+
+
                 </ul>
             </div>
         </div>
@@ -37,7 +39,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Sistema de facturacion</p>
         </footer>
     </div>
 

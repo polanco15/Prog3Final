@@ -5,18 +5,19 @@
 }
 <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
 
-<h2>Index</h2>
+<h2>Categorias</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create", null, new { @class = "classname" })
-    @Html.ActionLink("Print", "Imprimir")
+    @*@Html.ActionLink("Nuevo", "Create", new { @class = "btn btn-success" })
+        @Html.ActionLink("Print", "Imprimir")*@
+
 </p>
 <table class="table" id="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Categoria)
+           Categoria @*@Html.DisplayNameFor(model => model.Categoria)*@
         </th>
-        <th></th>
+        
     </tr>
 
 @foreach (var item in Model) {
@@ -25,9 +26,9 @@
             @Html.DisplayFor(modelItem => item.Categoria)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdCategoria }) |
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.IdCategoria }) |
             @Html.ActionLink("Details", "Details", new { id=item.IdCategoria }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdCategoria })
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdCategoria })*@
         </td>
     </tr>
 }
